@@ -95,6 +95,11 @@ def main():
             
         except ValueError as err:
             print(f"\033[91mError: {err}\033[0m\n")
+        except Exception as e:
+            print(f"\033[91mAn unexpected error occurred: {e}\033[0m\n")
+        except KeyboardInterrupt:
+            print("\033[93m\nCalculator interrupted. Exiting...\n\033[0m")
+            return
 
 if __name__ == "__main__":
     main()
